@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using InvoerBeveiliging.Lib.Entities;
 
 namespace InvoerBeveiliging.Lib.Services
@@ -13,9 +14,9 @@ namespace InvoerBeveiliging.Lib.Services
     {
         public List<BeveiligdeTextbox> BeveiligdeTextboxes { get; set; }
         public string Foutmeldingen { get; set; }
-        public bool AlleInputIsCorrect { get; set; }
+        public bool AlleInputCorrect { get; set; }
         public object Foutmelder { get; set; }
-        public Button AfHankelijkeKnop { get; set; }
+        public Button AfhankelijkeKnop { get; set; }
         int decimaalTeken;
 
         public BeveiligdeTextBoxInputVerwerking()
@@ -27,14 +28,26 @@ namespace InvoerBeveiliging.Lib.Services
         public BeveiligdeTextBoxInputVerwerking(object foutmelder, Button afhankelijkeKnop): this()
         {
             Foutmelder = foutmelder;
-            AfHankelijkeKnop = afhankelijkeKnop;
+            AfhankelijkeKnop = afhankelijkeKnop;
         }
 
         public void VoegBeveiligdeTextBoxToe(BeveiligdeTextbox beveiligdeTextbox)
         {
-            beveiligdeTextbox.TeCheckenTextBox.TextChanged += TextBoxChanged;
+            beveiligdeTextbox.TeCheckenTextBox.TextChanged += TextBoxTextChanged;
             BeveiligdeTextboxes.Add(beveiligdeTextbox);
+        }
 
+        BeveiligdeTextbox ZoekBeveiligdeTextBox(TextBox textBox)
+        {
+            BeveiligdeTextbox gezocht = null;
+            foreach (BeveiligdeTextbox beveiligdeTextbox in BeveiligdeTextboxes)
+            {
+                if (beveiligdeTextbox.TeCheckenTextBox == textBox)
+                {
+                    gezocht = beveiligdeTextbox;
+                }
+            }
+            return gezocht;
         }
 
 
@@ -65,22 +78,55 @@ namespace InvoerBeveiliging.Lib.Services
             BeheerAfhankelijkeKnop();
         }
 
-        private string IsGeldigGetal(TextBox teCheckenTextBox, Type dataType)
+        public static string IsGeldigGetal(TextBox teCheckenTextBox, Type dataType)
         {
-            throw new NotImplementedException();
+            string gepasteFoutmelding = "";
+            string getal;
+            string typeNaam = "";
+            getal = teCheckenTextBox.Text;
+            try
+            {
+                switch (dataType.Name)
+                {
+                    case nameof(Int32):
+                        typeNaam = "geheel getal";
+                        int.Parse(getal);
+                        break;
+                    case nameof(Int64):
+                        typeNaam = "geheel getal";
+                        int.Parse(getal);
+                        break;
+                    case nameof(Single):
+                        typeNaam = "kommagetal";
+                        float.Parse(getal);
+                        break;
+                    case nameof(Double):
+                        typeNaam = "kommagetal";
+                        float.Parse(getal);
+                        break;
+                    case nameof(Decimal):
+                        typeNaam = "decimaal getal";
+                        decimal.Parse(getal);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception)
+            {
+
+                gepasteFoutmelding = $"{getal} is geen geldig {typeNaam}";
+            }
+            return gepasteFoutmelding;
         }
 
-        private BeveiligdeTextbox ZoekBeveiligdeTextBox(TextBox textBox)
+        public void BeheerAfhankelijkeKnop()
         {
-            throw new NotImplementedException();
+            if (AlleInputCorrect) AfhankelijkeKnop.IsEnabled = true;
+            else AfhankelijkeKnop.IsEnabled = false;
         }
 
-        private void BeheerAfhankelijkeKnop()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ToonFout()
+        public void ToonFout()
         {
             throw new NotImplementedException();
         }
@@ -90,9 +136,38 @@ namespace InvoerBeveiliging.Lib.Services
             throw new NotImplementedException();
         }
 
-        private static void MarkeerTextBox(TextBox teCheckenTextBox, bool isGeldig)
+        private static void MarkeerTextBox(TextBox beveiligdeTextBox, bool isGeldig)
         {
-            throw new NotImplementedException();
+            if (isGeldig)
+            {
+                beveiligdeTextBox.BorderThickness = new Thickness(1);
+                beveiligdeTextBox.BorderBrush = Brushes.Gray;
+                beveiligdeTextBox.Background = Brushes.White;
+            }
+            else
+            {
+                beveiligdeTextBox.BorderThickness = new Thickness(3);
+                beveiligdeTextBox.BorderBrush = Brushes.Red;
+                beveiligdeTextBox.Background = Brushes.LightPink;
+            }
+        }
+        public void StelFoutmeldingenSamen()
+        {
+            Foutmeldingen = "";
+            AlleInputCorrect = true;
+            foreach (BeveiligdeTextbox beveiligdeTextBox in BeveiligdeTextboxes)
+            {
+                if (!string.IsNullOrEmpty(beveiligdeTextBox.FoutMelding))
+                {
+                    Foutmeldingen += beveiligdeTextBox.FoutMelding + "\n";
+                }
+
+                if (!beveiligdeTextBox.IsGeldig)
+                {
+                    AlleInputCorrect = false;
+                    break;
+                }
+            }
         }
     }
 }

@@ -179,3 +179,21 @@ D:\ODS\OneDrive - Hogeschool West-Vlaanderen\Oef\09 - Klassen\InvoerBeveiligingC
 D:\ODS\OneDrive - Hogeschool West-Vlaanderen\Oef\09 - Klassen\InvoerBeveiligingClassLib\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.csproj.CoreCompileInputs.cache
 D:\ODS\OneDrive - Hogeschool West-Vlaanderen\Oef\09 - Klassen\InvoerBeveiligingClassLib\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.exe
 D:\ODS\OneDrive - Hogeschool West-Vlaanderen\Oef\09 - Klassen\InvoerBeveiligingClassLib\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.pdb
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\bin\Debug\InvoerBeveiliging.Wpf.exe.config
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\bin\Debug\InvoerBeveiliging.Wpf.exe
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\bin\Debug\InvoerBeveiliging.Wpf.pdb
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\bin\Debug\InvoerBeveiliging.Lib.dll
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\bin\Debug\InvoerBeveiliging.Lib.pdb
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.csprojAssemblyReference.cache
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\MainWindow.g.cs
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\App.g.cs
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf_MarkupCompile.cache
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf_MarkupCompile.lref
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\MainWindow.baml
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.g.resources
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.Properties.Resources.resources
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.csproj.GenerateResource.cache
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.csproj.CoreCompileInputs.cache
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.csproj.CopyComplete
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.exe
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Wpf\obj\Debug\InvoerBeveiliging.Wpf.pdb

@@ -1,0 +1,6 @@
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Lib\bin\Debug\InvoerBeveiliging.Lib.dll
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Lib\bin\Debug\InvoerBeveiliging.Lib.pdb
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Lib\obj\Debug\InvoerBeveiliging.Lib.csprojAssemblyReference.cache
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Lib\obj\Debug\InvoerBeveiliging.Lib.csproj.CoreCompileInputs.cache
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Lib\obj\Debug\InvoerBeveiliging.Lib.dll
+C:\Users\dane_\Desktop\InvoerBeveiliging-Start\InvoerBeveiliging.Lib\obj\Debug\InvoerBeveiliging.Lib.pdb
