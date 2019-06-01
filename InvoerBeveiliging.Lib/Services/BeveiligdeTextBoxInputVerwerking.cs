@@ -17,7 +17,7 @@ namespace InvoerBeveiliging.Lib.Services
         public bool AlleInputCorrect { get; set; }
         public object Foutmelder { get; set; }
         public Button AfhankelijkeKnop { get; set; }
-        int decimaalTeken;
+        string decimaalTeken;
 
         public BeveiligdeTextBoxInputVerwerking()
         {
@@ -53,7 +53,9 @@ namespace InvoerBeveiliging.Lib.Services
 
         private void BepaalDecimaalTeken()
         {
-            throw new NotImplementedException();
+            float testGetal = 0F;
+            string testGetalString = testGetal.ToString("0.0");
+            decimaalTeken = testGetalString.Substring(1, 1);
         }
 
         public void TextBoxTextChanged(object sender, RoutedEventArgs e)
@@ -128,15 +130,30 @@ namespace InvoerBeveiliging.Lib.Services
 
         public void ToonFout()
         {
-            throw new NotImplementedException();
+            if (Foutmelder is TextBlock)
+            {
+                TextBlock textBlock = (TextBlock)Foutmelder;
+                textBlock.Text = Foutmeldingen;
+            }
+            else if (Foutmelder is Label)
+            {
+                Label label = (Label)Foutmelder;
+                label.Content = Foutmeldingen;
+            }
+            else if (Foutmelder is null
+                        && !string.IsNullOrEmpty(Foutmeldingen)
+                        && !string.IsNullOrWhiteSpace(Foutmeldingen))
+            {
+                MessageBox.Show(Foutmeldingen);
+            }
         }
 
         private void EvalueerFouten()
         {
-            throw new NotImplementedException();
+            StelFoutmeldingenSamen();
         }
 
-        private static void MarkeerTextBox(TextBox beveiligdeTextBox, bool isGeldig)
+        public static void MarkeerTextBox(TextBox beveiligdeTextBox, bool isGeldig)
         {
             if (isGeldig)
             {
